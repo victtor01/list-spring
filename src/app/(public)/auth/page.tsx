@@ -1,9 +1,9 @@
 "use client";
 
 import { fontSaira } from "@/fonts";
-import Link from "next/link";
-import { AnimationProps, motion } from "framer-motion";
 import { useAuthentication } from "@/hooks/use-auth";
+import { AnimationProps, motion } from "framer-motion";
+import Link from "next/link";
 
 const animations = {
   initial: { opacity: 0, scale: 0.7 },
@@ -14,6 +14,7 @@ export default function Auth() {
   const { useAuth } = useAuthentication();
   const { form, submit } = useAuth();
   const { formState, register, handleSubmit } = form;
+  const { errors } = formState;
 
   return (
     <motion.form
@@ -21,7 +22,7 @@ export default function Auth() {
       variants={animations}
       initial="initial"
       animate="animate"
-      className="flex z-20 m-auto flex-col gap-0 p-10 w-full max-w-[25rem] h-auto bg-gray-800 rounded-3xl shadow-xl"
+      className="flex z-20 m-auto dark:text-white flex-col gap-0 p-10 w-full max-w-[25rem] h-auto border bg-white dark:bg-gray-800 rounded-3xl shadow-xl"
     >
       <header className="w-full font-semibold text-gray-300 text-xl">
         <h1 className={fontSaira}>Faça o login</h1>
@@ -37,6 +38,11 @@ export default function Auth() {
             id="email"
             className="bg-transparent border rounded-lg focus:outline-indigo-500 outline-none border-gray-700 bg-gray-900 bg-opacity-70 p-2 px-3"
           />
+          {errors?.email && (
+            <span className="text-red-500">
+              {errors?.email?.message}
+            </span>
+          )}
         </label>
 
         <label htmlFor="password" className="flex flex-col gap-2">
@@ -48,6 +54,11 @@ export default function Auth() {
             id="password"
             className="bg-transparent border rounded-lg border-gray-700 focus:outline-indigo-500 p-2 px-3 outline-none"
           />
+           {errors?.password && (
+            <span className="text-red-500">
+              {errors?.password?.message}
+            </span>
+          )}
         </label>
       </section>
 

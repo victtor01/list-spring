@@ -69,7 +69,7 @@ const burbles = [
 
 export default function LayoutAuth({ children }: LayoutAuthProps) {
   return (
-    <main className="flex w-full flex-col h-screen overflow-auto bg-gray-900 relative">
+    <main className="flex w-full flex-col h-screen overflow-auto bg-white dark:bg-gray-900 relative">
       <header className="flex w-full p-7 gap-2 justify-between">
         <button
           className={`${fontSaira} shadow-2xl bg-purple-600 text-gray-300 p-2 px-3 opacity-80 hover:opacity-100 rounded-md font-semibold`}
@@ -80,7 +80,7 @@ export default function LayoutAuth({ children }: LayoutAuthProps) {
         <button
           className={`${fontSaira} bg-white text-gray-500 p-2 px-5 opacity-90 hover:opacity-100 rounded-md font-semibold`}
         >
-          SignIn
+          SiginUp
         </button>
       </header>
 

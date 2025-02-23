@@ -11,8 +11,10 @@ interface ResponseAuth {
 }
 
 const schemaLogin = z.object({
-  email: z.string().email(),
-  password: z.string(),
+  email: z.string().email("Formato de email inválido!"),
+  password: z
+    .string({ message: "A senha é requerida" })
+    .min(1, "Senha curta demais!"),
 });
 
 type SchemaProps = z.infer<typeof schemaLogin>;
@@ -32,7 +34,7 @@ function useAuthentication() {
           password,
         });
 
-        console.log(response)
+        console.log(response);
 
         // router.replace("/home");
       } catch (error) {
