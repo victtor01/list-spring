@@ -22,9 +22,9 @@ export default function Auth() {
       variants={animations}
       initial="initial"
       animate="animate"
-      className="flex z-20 m-auto dark:text-white flex-col gap-0 p-10 w-full max-w-[25rem] h-auto border bg-white dark:bg-gray-800 rounded-3xl shadow-xl"
+      className="flex z-20 m-auto dark:text-white flex-col gap-0 p-10 w-full max-w-[25rem] h-auto border dark:border-gray-700 bg-white dark:bg-gray-800 rounded-3xl shadow-xl"
     >
-      <header className="w-full font-semibold text-gray-300 text-xl">
+      <header className="w-full font-semibold dark:text-gray-300 text-xl">
         <h1 className={fontSaira}>Faça o login</h1>
       </header>
 

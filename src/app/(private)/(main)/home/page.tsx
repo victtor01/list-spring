@@ -89,7 +89,7 @@ const SpaceContainer = (props: SpaceProps) => {
       <div className="min-w-[4rem] bg-indigo-600 h-[4rem] rounded-[2rem] rounded-tr-md z-20 border-4 border-indigo-500"></div>
 
       <div className="ml-[-2rem] flex flex-1 h-[5rem]">
-        <div className="flex relative flex-col border-2 border-gray-200 dark:border-gray-700 group-hover:border-indigo-500 w-full pl-10 overflow-hidden p-3 gap-2 bg-white dark:bg-gray-900 rounded-xl dark:shadow-xl hover:shadow-indigo-500/30">
+        <div className="flex relative flex-col border-2 border-gray-200 dark:border-gray-700 group-hover:border-indigo-500 w-full pl-10 overflow-hidden p-3 gap-2 bg-gray-50 dark:bg-gray-900 rounded-xl dark:shadow-xl hover:shadow-indigo-500/30">
           <header className="flex w-full justify-between gap-2">
             <h1
               className={`${fontSaira} text-gray-700 dark:text-gray-300 font-semibold flex text-xl line-clamp-1`}
@@ -123,7 +123,7 @@ export default function HomePage() {
             className="flex p-1 px-2 bg-gray-100 text-gray-400 font-semibold gap-2 rounded-lg
           dark:bg-gray-800"
           >
-            <span>2</span>
+            <span>{workspaces?.length}</span>
             <span>/</span>
             <span>2</span>
           </div>
@@ -132,7 +132,7 @@ export default function HomePage() {
           <input
             type="text"
             className="flex w-full p-2 px-3 border rounded-lg outline-none focus:ring-4 dark:ring-indigo-500 ring-indigo-400 transition-shadow
-            dark:bg-gray-800 dark:border-gray-600"
+            dark:bg-gray-900 dark:border-gray-700"
             placeholder="Pesquise por um workspace"
           />
           <button className="w-[2.8rem] h-[2.5rem] bg-indigo-500 text-white rounded-md grid place-items-center">

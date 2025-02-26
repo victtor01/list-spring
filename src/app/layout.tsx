@@ -26,9 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <QueryProvider>
-      <html lang="pt-br" className="light">
+      <html lang="pt-br" className="dark">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased dark:text-white text-black`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased dark:text-white text-black bg-white dark:bg-gray-900`}
         >
           {children}
           <ToastContainer />
